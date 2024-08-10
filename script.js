@@ -75,6 +75,7 @@ setInterval(draw, 30);
         const div = document.createElement('div');
         div.textContent = text;
         output.appendChild(div);
+        output.scrollTop = output.scrollHeight;
     }
 
 
