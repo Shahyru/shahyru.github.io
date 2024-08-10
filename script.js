@@ -75,8 +75,25 @@ setInterval(draw, 30);
         const div = document.createElement('div');
         div.textContent = text;
         output.appendChild(div);
-        output.scrollTop = output.scrollHeight;
     }
+
+    // Initial output
+    addToOutput('Welcome to the Terminal. Type "help" for available commands.');
+    addToOutput('user@linux:~$');
+
+    // Ensure the input is focused when the page loads
+    input.focus();
+
+    // Re-focus input when clicking anywhere in the terminal
+    terminalBody.addEventListener('click', () => {
+        input.focus();
+    });
+
+    // Handle window resize for mobile orientation changes
+    window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    });
 
     addToOutput('Welcome to the Terminal. Type "help" for available commands.');
 });
