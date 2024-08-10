@@ -3,43 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Full Stack Developer</title>
+    <title>Your Name - Matrix Terminal Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="computer-screen">
-        <div class="screen-content">
-            <div class="terminal">
-                <h1>Your Name</h1>
-                <h2>Full Stack Developer</h2>
-                <button id="startButton">Press to Start</button>
-                <div id="terminalContent" class="hidden">
-                    <div class="command">whoami</div>
-                    <div class="output">A passionate full stack developer with expertise in various technologies.</div>
-                    
-                    <div class="command">ls skills/</div>
-                    <div class="output">
-                        Frontend: HTML, CSS, JavaScript, React<br>
-                        Backend: Node.js, Python, Java<br>
-                        Database: MongoDB, MySQL, PostgreSQL<br>
-                        DevOps: Docker, Kubernetes, AWS
-                    </div>
-                    
-                    <div class="command">cat projects.txt</div>
-                    <div class="output">
-                        1. E-commerce Platform (MERN Stack)<br>
-                        2. Task Management App (Vue.js + Django)<br>
-                        3. Real-time Chat Application (Socket.io + Express)<br>
-                        4. Personal Blog (Gatsby + GraphQL)
-                    </div>
-                    
-                    <div class="command">echo $CONTACT_INFO</div>
-                    <div class="output">
-                        Email: your.email@example.com<br>
-                        GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a><br>
-                        LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
-                    </div>
-                </div>
+    <canvas id="matrix-bg"></canvas>
+    <div class="terminal">
+        <div class="terminal-header">Terminal</div>
+        <div class="terminal-body">
+            <div id="output"></div>
+            <div class="input-line">
+                <span class="prompt">user@linux:~$</span>
+                <input type="text" id="user-input" autofocus>
             </div>
         </div>
     </div>
