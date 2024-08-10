@@ -79,5 +79,4 @@ setInterval(draw, 30);
     }
 
     addToOutput('Welcome to the Terminal. Type "help" for available commands.');
-    addToOutput('user@linux:~$ help');
 });
