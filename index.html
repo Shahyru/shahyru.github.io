@@ -1,25 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <!-- the below meta tag is default in most modern browsers. however if you have an
-  older browser, the emojis may not show up properly. In which case you need this meta
-  tag. Read more here: https://teamtreehouse.com/community/meta-charsetutf8-what-does-this-mean-or-what-does-it-do-i-deleted-it-from-the-code-and-nothing-changed -->
-  <meta charset="utf-8" >  
-  <title>Grid Master</title>
-  <link rel="stylesheet" type="text/css" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Full Stack Developer</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="zone green">🦊</div>
-  <div class="zone red">🐰</div>
-  <div class="zone blue">🐸</div>
-  <div class="zone yellow">🦁</div>
-  <div class="zone purple">🐯</div>
-  <div class="zone brown">🐭</div>
-  <div class="zone green">🦄</div>
-  <div class="zone red">🐲</div>
-  <div class="zone blue">🐷</div>
-  <div class="zone yellow">🐺</div>
-  <div class="zone purple">🐼</div>
-  <div class="zone brown">🐻</div>
+    <div class="computer">
+        <div class="screen">
+            <div class="screen-content">
+                <h1>Your Name</h1>
+                <h2>Full Stack Developer</h2>
+                <div class="power-button">Press to Start</div>
+            </div>
+        </div>
+        <div class="keyboard"></div>
+    </div>
+
+    <div class="terminal hidden">
+        <div class="terminal-header">
+            <div class="close-button">&times;</div>
+        </div>
+        <div class="terminal-content">
+            <div class="category" data-category="about">
+                <div class="command">whoami</div>
+                <div class="output">A passionate full stack developer with expertise in various technologies.</div>
+            </div>
+            
+            <div class="category" data-category="skills">
+                <div class="command">ls skills/</div>
+                <div class="output">
+                    Frontend: HTML, CSS, JavaScript, React<br>
+                    Backend: Node.js, Python, Java<br>
+                    Database: MongoDB, MySQL, PostgreSQL<br>
+                    DevOps: Docker, Kubernetes, AWS
+                </div>
+            </div>
+            
+            <div class="category" data-category="projects">
+                <div class="command">cat projects.txt</div>
+                <div class="output">
+                    1. E-commerce Platform (MERN Stack)<br>
+                    2. Task Management App (Vue.js + Django)<br>
+                    3. Real-time Chat Application (Socket.io + Express)<br>
+                    4. Personal Blog (Gatsby + GraphQL)
+                </div>
+            </div>
+            
+            <div class="category" data-category="contact">
+                <div class="command">echo $CONTACT_INFO</div>
+                <div class="output">
+                    Email: your.email@example.com<br>
+                    GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a><br>
+                    LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
