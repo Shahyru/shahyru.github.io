@@ -77,15 +77,6 @@ setInterval(draw, 30);
         output.appendChild(div);
     }
 
-    // Initial output
-    addToOutput('Welcome to the Terminal. Type "help" for available commands.');
-    addToOutput('user@linux:~$');
-
-
-    // Re-focus input when clicking anywhere in the terminal
-    terminalBody.addEventListener('click', () => {
-        input.focus();
-    });
 
     addToOutput('Welcome to the Terminal. Type "help" for available commands.');
 });
