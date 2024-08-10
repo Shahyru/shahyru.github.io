@@ -89,11 +89,5 @@ setInterval(draw, 30);
         input.focus();
     });
 
-    // Handle window resize for mobile orientation changes
-    window.addEventListener('resize', () => {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-    });
-
     addToOutput('Welcome to the Terminal. Type "help" for available commands.');
 });
