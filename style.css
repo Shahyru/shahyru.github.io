@@ -4,7 +4,6 @@ body, html {
     font-family: 'Courier New', monospace;
     background-color: #1a1a1a;
     color: #33ff33;
-    overflow: hidden;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -12,101 +11,77 @@ body, html {
 }
 
 .computer {
-    width: 600px;
-    height: 450px;
-    background-color: #808080;
+    width: 80vw;
+    max-width: 800px;
+    height: 60vh;
+    background-color: #333;
     border-radius: 10px;
     position: relative;
     transform: perspective(1000px) rotateX(5deg);
     transition: transform 0.3s;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
 }
 
 .computer:hover {
-    transform: perspective(1000px) rotateX(0deg) scale(1.05);
+    transform: perspective(1000px) rotateX(0deg) scale(1.02);
 }
 
 .screen {
-    width: 550px;
-    height: 340px;
+    width: calc(100% - 40px);
+    height: calc(100% - 60px);
     background-color: #000;
     position: absolute;
     top: 20px;
-    left: 25px;
+    left: 20px;
     border-radius: 5px;
     overflow: hidden;
+    border: 2px solid #444;
 }
 
 .screen-content {
     padding: 20px;
-    text-align: center;
-}
-
-.keyboard {
-    width: 580px;
-    height: 30px;
-    background-color: #606060;
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    border-radius: 5px;
-}
-
-.power-button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    transition-duration: 0.4s;
-}
-
-.power-button:hover {
-    background-color: #45a049;
-}
-
-.terminal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    height: 80%;
-    background-color: rgba(0, 0, 0, 0.9);
-    border: 1px solid #33ff33;
-    border-radius: 5px;
-    padding: 20px;
+    height: 100%;
     overflow-y: auto;
 }
 
-.terminal-header {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 10px;
+h1, h2 {
+    text-align: center;
+    color: #33ff33;
+    text-shadow: 0 0 5px #33ff33;
 }
 
-.close-button {
+#startButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #33ff33;
+    color: #000;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 24px;
-    color: #33ff33;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+#startButton:hover {
+    background-color: #00cc00;
+    box-shadow: 0 0 10px #33ff33;
 }
 
 .command {
-    margin-bottom: 10px;
+    margin-top: 20px;
+    color: #33ff33;
 }
 
 .command::before {
     content: "$ ";
-    color: #33ff33;
 }
 
 .output {
     margin-left: 20px;
     margin-bottom: 20px;
+    color: #ffffff;
 }
 
 a {
@@ -120,18 +95,4 @@ a:hover {
 
 .hidden {
     display: none;
-}
-
-#cursor {
-    display: inline-block;
-    width: 10px;
-    height: 20px;
-    background-color: #33ff33;
-    animation: blink 0.7s infinite;
-}
-
-@keyframes blink {
-    0% { opacity: 0; }
-    50% { opacity: 1; }
-    100% { opacity: 0; }
 }
