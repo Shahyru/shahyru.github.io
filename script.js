@@ -1,51 +1,29 @@
-function typeWriter(element, text, index = 0) {
-    if (index < text.length) {
-        element.innerHTML += text.charAt(index);
-        setTimeout(() => typeWriter(element, text, index + 1), 50);
-    } else {
-        element.innerHTML += ' <span id="cursor"></span>';
-    }
-}
-
 document.addEventListener('DOMContentLoaded', () => {
-    const powerButton = document.querySelector('.power-button');
-    const terminal = document.querySelector('.terminal');
-    const closeButton = document.querySelector('.close-button');
-    const categories = document.querySelectorAll('.category');
+    const startButton = document.getElementById('startButton');
+    const terminalContent = document.getElementById('terminalContent');
 
-    powerButton.addEventListener('click', () => {
-        terminal.classList.remove('hidden');
-        typeCategories();
+    startButton.addEventListener('click', () => {
+        startButton.classList.add('hidden');
+        terminalContent.classList.remove('hidden');
+        typeContent();
     });
 
-    closeButton.addEventListener('click', () => {
-        terminal.classList.add('hidden');
-        resetTerminal();
-    });
+    function typeContent() {
+        const elements = terminalContent.children;
+        let delay = 0;
 
-    function typeCategories() {
-        categories.forEach((category, index) => {
+        for (let element of elements) {
             setTimeout(() => {
-                const command = category.querySelector('.command');
-                const output = category.querySelector('.output');
-                const commandText = command.textContent;
-                const outputText = output.textContent;
-
-                command.textContent = '';
-                output.textContent = '';
-
-                typeWriter(command, commandText);
-                setTimeout(() => typeWriter(output, outputText), commandText.length * 50 + 500);
-            }, index * 2000);
-        });
+                typeWriter(element, element.textContent);
+            }, delay);
+            delay += 1000; // Adjust this value to change the delay between sections
+        }
     }
 
-    function resetTerminal() {
-        categories.forEach(category => {
-            const command = category.querySelector('.command');
-            const output = category.querySelector('.output');
-            command.textContent = command.getAttribute('data-original-text') || command.textContent;
-            output.textContent = output.getAttribute('data-original-text') || output.textContent;
-        });
+    function typeWriter(element, text, index = 0) {
+        if (index < text.length) {
+            element.innerHTML = text.substring(0, index + 1);
+            setTimeout(() => typeWriter(element, text, index + 1), 50);
+        }
     }
 });
