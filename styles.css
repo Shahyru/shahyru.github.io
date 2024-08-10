@@ -4,9 +4,7 @@ body, html {
     height: 100%;
     font-family: 'Courier New', monospace;
     background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: #33ff33;
     overflow: hidden;
 }
 
@@ -19,45 +17,49 @@ body, html {
     z-index: -1;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 .terminal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60%;
-    max-width: 600px;
-    background-color: #333;
-    border: 2px solid #FFA500;
+    width: 600px;
+    height: 400px;
+    background-color: rgba(0, 10, 20, 0.8);
+    border: 2px solid #f0a500;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 0 20px rgba(255, 165, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(240, 165, 0, 0.5);
 }
 
 .terminal-header {
-    background-color: #FFA500;
+    background-color: #f0a500;
     color: #000;
     padding: 5px 10px;
+    font-size: 14px;
     font-weight: bold;
 }
 
 .terminal-body {
+    flex-grow: 1;
     padding: 10px;
-    height: 300px;
     overflow-y: auto;
 }
 
 #output {
     margin-bottom: 10px;
-    color: #00FF00;
 }
 
 .input-line {
     display: flex;
-    align-items: center;
 }
 
 .prompt {
-    color: #FFA500;
+    color: #f0a500;
     margin-right: 5px;
 }
 
@@ -65,21 +67,31 @@ body, html {
     flex-grow: 1;
     background-color: transparent;
     border: none;
-    color: #00FF00;
+    color: #33ff33;
     font-family: 'Courier New', monospace;
     font-size: 16px;
     outline: none;
 }
 
-::-webkit-scrollbar {
-    width: 10px;
+.command {
+    margin: 5px 0;
+    color: #33ff33;
 }
 
-::-webkit-scrollbar-track {
-    background: rgba(0, 0, 51, 0.8);
+.output {
+    margin: 5px 0 15px 20px;
+    color: #e0e0e0;
 }
 
-::-webkit-scrollbar-thumb {
-    background: #FFA500;
-    border-radius: 5px;
+.terminal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.terminal-body::-webkit-scrollbar-track {
+    background: rgba(0, 10, 20, 0.8);
+}
+
+.terminal-body::-webkit-scrollbar-thumb {
+    background-color: #f0a500;
+    border-radius: 4px;
 }
