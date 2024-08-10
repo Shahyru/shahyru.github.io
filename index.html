@@ -12,53 +12,37 @@
             <div class="screen-content">
                 <h1>Your Name</h1>
                 <h2>Full Stack Developer</h2>
-                <div class="power-button">Press to Start</div>
-            </div>
-        </div>
-        <div class="keyboard"></div>
-    </div>
-
-    <div class="terminal hidden">
-        <div class="terminal-header">
-            <div class="close-button">&times;</div>
-        </div>
-        <div class="terminal-content">
-            <div class="category" data-category="about">
-                <div class="command">whoami</div>
-                <div class="output">A passionate full stack developer with expertise in various technologies.</div>
-            </div>
-            
-            <div class="category" data-category="skills">
-                <div class="command">ls skills/</div>
-                <div class="output">
-                    Frontend: HTML, CSS, JavaScript, React<br>
-                    Backend: Node.js, Python, Java<br>
-                    Database: MongoDB, MySQL, PostgreSQL<br>
-                    DevOps: Docker, Kubernetes, AWS
-                </div>
-            </div>
-            
-            <div class="category" data-category="projects">
-                <div class="command">cat projects.txt</div>
-                <div class="output">
-                    1. E-commerce Platform (MERN Stack)<br>
-                    2. Task Management App (Vue.js + Django)<br>
-                    3. Real-time Chat Application (Socket.io + Express)<br>
-                    4. Personal Blog (Gatsby + GraphQL)
-                </div>
-            </div>
-            
-            <div class="category" data-category="contact">
-                <div class="command">echo $CONTACT_INFO</div>
-                <div class="output">
-                    Email: your.email@example.com<br>
-                    GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a><br>
-                    LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
+                <button id="startButton">Press to Start</button>
+                <div id="terminalContent" class="hidden">
+                    <div class="command">whoami</div>
+                    <div class="output">A passionate full stack developer with expertise in various technologies.</div>
+                    
+                    <div class="command">ls skills/</div>
+                    <div class="output">
+                        Frontend: HTML, CSS, JavaScript, React<br>
+                        Backend: Node.js, Python, Java<br>
+                        Database: MongoDB, MySQL, PostgreSQL<br>
+                        DevOps: Docker, Kubernetes, AWS
+                    </div>
+                    
+                    <div class="command">cat projects.txt</div>
+                    <div class="output">
+                        1. E-commerce Platform (MERN Stack)<br>
+                        2. Task Management App (Vue.js + Django)<br>
+                        3. Real-time Chat Application (Socket.io + Express)<br>
+                        4. Personal Blog (Gatsby + GraphQL)
+                    </div>
+                    
+                    <div class="command">echo $CONTACT_INFO</div>
+                    <div class="output">
+                        Email: your.email@example.com<br>
+                        GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a><br>
+                        LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
