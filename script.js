@@ -22,8 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function typeWriter(element, text, index = 0) {
         if (index < text.length) {
-            element.innerHTML = text.substring(0, index + 1);
+            element.innerHTML = text.substring(0, index + 1) + '<span class="cursor">|</span>';
             setTimeout(() => typeWriter(element, text, index + 1), 50);
+        } else {
+            element.innerHTML = text + '<span class="cursor">|</span>';
         }
     }
 });
