@@ -81,8 +81,6 @@ setInterval(draw, 30);
     addToOutput('Welcome to the Terminal. Type "help" for available commands.');
     addToOutput('user@linux:~$');
 
-    // Ensure the input is focused when the page loads
-    input.focus();
 
     // Re-focus input when clicking anywhere in the terminal
     terminalBody.addEventListener('click', () => {
