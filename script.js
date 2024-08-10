@@ -78,6 +78,5 @@ setInterval(draw, 30);
         output.scrollTop = output.scrollHeight;
     }
 
-
     addToOutput('Welcome to the Terminal. Type "help" for available commands.');
 });
