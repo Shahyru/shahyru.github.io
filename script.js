@@ -50,9 +50,7 @@ setInterval(draw, 30);
         about: 'I am a passionate full stack developer with expertise in various technologies.',
         skills: 'Frontend: HTML, CSS, JavaScript, React\nBackend: Node.js, Python, Java\nDatabase: MongoDB, MySQL, PostgreSQL\nDevOps: Docker, Kubernetes, AWS',
         projects: '1. E-commerce Platform (MERN Stack)\n2. Task Management App (Vue.js + Django)\n3. Real-time Chat Application (Socket.io + Express)\n4. Personal Blog (Gatsby + GraphQL)',
-        contact: 'Email: shahyr08@gmail.com\n
-                  GitHub: github.com/shahyru\n
-                  LinkedIn: linkedin.com/in/shahyru',
+        contact: 'Email: shahyr08@gmail.com\nGitHub: github.com/shahyru\nLinkedIn: linkedin.com/in/shahyru',
         clear: 'clear',
     };
 
