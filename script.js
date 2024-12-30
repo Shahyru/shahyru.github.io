@@ -10,7 +10,7 @@ canvas.width = window.innerWidth;
 const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
 const nums = '0123456789';
 const dhivehi = 'ހށނރބޅކއވމފދތލގޏސޑޒޓޔޕޖޗޘޙޚޛޜޝޞޟޠޡޢޣޤޥަީުޫެޭޮޯްޱ';
-const alphabet = katakana + latin + nums + dhivehi;
+const alphabet = katakana + nums + dhivehi;
 
 const fontSize = 16;
 const columns = canvas.width / fontSize;
