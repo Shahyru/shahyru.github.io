@@ -6,11 +6,12 @@ const ctx = canvas.getContext('2d');
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
     
-    // const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    
 const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
+const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const nums = '0123456789';
 const dhivehi = 'ހށނރބޅކއވމފދތލގޏސޑޒޓޔޕޖޗޘޙޚޛޜޝޞޟޠޡޢޣޤޥަީުޫެޭޮޯްޱ';
-const alphabet = katakana + nums + dhivehi;
+const alphabet = katakana + latin + nums + dhivehi;
 
 const fontSize = 16;
 const columns = canvas.width / fontSize;
