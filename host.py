@@ -4,7 +4,7 @@ from http.server import BaseHTTPRequestHandler, SimpleHTTPRequestHandler, HTTPSe
 
 class RequestHandler(SimpleHTTPRequestHandler):
     def replace_locale(self):
-        self.path = re.sub(r'^\/document\/(\w{2})\/ps5', '/document/en/ps5', self.path)
+        self.path = re.sub(r'^\/document\/(\w{2})\/ps5', '/ps5', self.path)
 
     def do_GET(self):
         self.replace_locale()
@@ -12,7 +12,7 @@ class RequestHandler(SimpleHTTPRequestHandler):
 
     def do_POST(self):
         self.replace_locale()
-        tn = self.path.lstrip('/document/en/ps5/')
+        tn = self.path.lstrip('/ps5/')
         print('!POST!: tn:\n'  + tn)
         fn = tn
         if (not tn.startswith("T_")):
