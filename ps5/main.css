@@ -105,7 +105,7 @@ a:focus {
 
 #payloads-view {
     display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto 1fr auto;
     grid-auto-rows: center;
     column-gap: 2.5rem;
     row-gap: 1rem;
