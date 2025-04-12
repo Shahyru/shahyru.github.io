@@ -228,7 +228,7 @@ a:focus {
     border: var(--surface-color-primary) 1px solid;
     border-radius: 5px;
     padding: 8px;
-    margin: 0px 300px 0px 300px;
+    margin: 0px 600px 0px 600px;
     box-sizing: border-box;
     overflow-y: auto;
 }
