@@ -39,7 +39,7 @@ const draw = () => {
     }
 };
 
-setInterval(draw, 300);
+setInterval(draw, 100);
 
 
 
