@@ -206,6 +206,7 @@ a:focus {
     background: #bdc0c2;
     border-radius: 5px;
     padding: 0.2rem 0.4rem;
+    margin: 0px 300px 0px 300px;
     text-align: center;
     position: center;
     display: flex;
@@ -228,7 +229,7 @@ a:focus {
     border: var(--surface-color-primary) 1px solid;
     border-radius: 5px;
     padding: 8px;
-    margin: 0px 200px 50px 200px;
+    margin: 0px 300px 50px 300px;
     box-sizing: border-box;
     overflow-y: auto;
 }
