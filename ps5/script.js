@@ -25,7 +25,7 @@ const draw = () => {
     ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    ctx.fillStyle = '#00FF00';  // Matrix green color
+    ctx.fillStyle = '#bcbcbc';  // Matrix green color
     ctx.font = fontSize + 'px monospace';
 
     for (let i = 0; i < rainDrops.length; i++) {
@@ -39,7 +39,7 @@ const draw = () => {
     }
 };
 
-setInterval(draw, 100);
+setInterval(draw, 30);
 
 
 
